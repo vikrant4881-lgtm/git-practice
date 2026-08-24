@@ -1,1 +1,8 @@
 secret.txt
+# Later you'll commonly see .gitignore containing things like:
+
+# node_modules/
+# .env
+# dist/
+
+# Especially remember .env—that's commonly where API keys/secrets live, and we generally don't commit it.
