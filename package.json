@@ -1,0 +1,27 @@
+{
+  "name": "git-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Git practice project with Postgres + pgvector semantic search",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f db",
+    "db:reset": "docker compose down -v && docker compose up -d db",
+    "migrate": "node src/migrate.js",
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "test:smoke": "node src/smoke-test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.3"
+  }
+}
